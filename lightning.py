@@ -247,7 +247,7 @@ if __name__ == '__main__':
         log_info=LOG_INFO
     )
 
-    logger = WandbLogger(project="seq-to-seq-prediction-straps", log_model='all')
+    logger = WandbLogger(project="project-name", log_model='all')
     functional_callbacks = [
         callbacks.ModelCheckpoint(monitor='val_loss', mode='min'),            # Save best model (based on val_loss (lower is better)))
         callbacks.EarlyStopping(monitor='val_loss', patience=5, mode='min'),  # Stop training if val_loss doesn't improve for 5 epochs
