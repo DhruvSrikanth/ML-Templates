@@ -196,7 +196,7 @@ class SequenceLearner(L.LightningModule):
         return {'optimizer': opt, 'lr_scheduler': sch, 'monitor': 'val_loss'}
 
 
-def benchmark(trainer: L.Trainer, model: nn.LightningModule, train_dataloaders: data.Dataloader, val_dataloaders: data.Dataloader, test_dataloaders: data.Dataloader, log_info: bool, log_freq: int) -> None:
+def benchmark(trainer: L.Trainer, model: L.LightningModule, train_dataloaders: data.Dataloader, val_dataloaders: data.Dataloader, test_dataloaders: data.Dataloader, log_info: bool, log_freq: int) -> None:
     """
     Benchmark the model.
 
